@@ -1,0 +1,6 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_estudiante","estudiante","model_estudiante","base.group_user",1,0,0,0
+"access_docente","docente","model_docente","base.group_user",1,0,0,0
+"access_estadistica","estadistica","model_estadistica","base.group_user",1,0,0,0 
+"access_aula","aula","model_aula","base.group_user",1,0,0,0 
+"access_horarios","horarios","model_horarios","base.group_user",1,0,0,0 

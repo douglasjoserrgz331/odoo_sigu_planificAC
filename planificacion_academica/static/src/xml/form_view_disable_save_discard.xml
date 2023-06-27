@@ -1,0 +1,12 @@
+<templates>
+    <t t-name="FormView.buttons">
+        <div class="btn-group o_form_buttons_edit">
+            <button type="button" class="btn btn-primary o_form_button_save" disabled="disabled">
+                Guardar
+            </button>
+            <button type="button" class="btn btn-default o_form_button_cancel" disabled="disabled">
+                Descartar
+            </button>
+        </div>
+    </t>
+</templates>

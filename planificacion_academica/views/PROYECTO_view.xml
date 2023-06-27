@@ -1,0 +1,157 @@
+<odoo>
+    <data>
+        <!-- VISTA FORM: Estadisticas -->
+        <record model="ir.ui.view" id="view_estadistica_form">
+            <field name="name">estadistica.form</field>
+            <field name="model">estadistica</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="estudiantes">
+                    <sheet>
+                        <group>
+                            <field name="idestudiante" invisible="1"/>
+                            <field name="estadisticas"/>
+                            <field name="iddocente" invisible="1"/>
+                            <field name="estadistica"/>
+                            <field name="programaestadistica" readonly='1'/>
+                            <field name="nucleoestadistica" readonly='1'/>
+                            <field name="turnoestadistica" readonly='1'/>
+                            <field name="ucestadistica" readonly='1'/>
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- FIN VISTA FORM: Estadisticas -->
+
+        <!-- VISTA TREE: Estadisticas -->
+        <record model="ir.ui.view" id="view_estadistica_tree">
+            <field name="name">estadistica.tree</field>
+            <field name="model">estadistica</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="estudiantes">
+                    <field name="estadisticas"/>
+                </tree>
+            </field>
+        </record>
+        <!-- FIN VISTA TREE: Estadisticas -->
+
+        <!-- MODELO: Estadisticas -->
+        <record model="ir.actions.act_window" id="action_estadistica">
+            <field name="name">Estadisticas</field>
+            <field name="res_model">estadistica</field>
+            <field name="view_mode">form</field>
+        </record>
+        <!-- FIN MODELO: Estadisticas -->
+
+        <!-- MENÚ SECUNDARIO: Estadisticas -->
+        <menuitem name="Estadisticas" id="menu_estadistica" action="action_estadistica" sequence="1"/>
+
+        <!-- VISTA FORM: Aulas -->
+    <record model="ir.ui.view" id="view_aula_form">
+        <field name="name">aula.form</field>
+        <field name="model">aula</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="aula">
+            <group col="4" colspan="2">
+                <field name="idaula" select="1"/>
+                <field name="nucleo" select="2"/>
+                <field name="codigo" select="0"/>
+                <field name="numeroestudiantes" select="0"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <!-- FIN VISTA FORM: Aulas -->
+
+    <!-- VISTA TREE: Aulas -->
+    <record model="ir.ui.view" id="view_aula_tree">
+        <field name="name">aula.tree</field>
+        <field name="model">aula</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="aula">
+                <field name="idaula"/>
+                <field name="nucleo"/>
+                <field name="codigo"/>
+                <field name="numeroestudiantes"/>
+
+            </tree>
+        </field>
+    </record>
+    <!-- FIN VISTA TREE: Aulas -->
+
+    <!-- MODELO: Aulas -->
+    <record model="ir.actions.act_window" id="action_aula">
+        <field name="name">Aulas</field>
+        <field name="res_model">aula</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- FIN MODELO: Aulas -->
+
+    <!-- MENÚ SECUNDARIO: Aulas -->
+    <menuitem name="Aulas" id="menu_aula" action="action_aula" parent="menu_estadistica"/>
+        
+    <!-- VISTA FORM: Horarios -->
+    <record model="ir.ui.view" id="view_horarios_form">
+        <field name="name">horarios.form</field>
+        <field name="model">horarios</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="horarios">
+            <group col="4" colspan="2">
+                <field name="idhorario" select="1"/>
+                <field name="programa" select="2"/>
+                <field name="nucleo" select="0"/>
+                <field name="docente" select="0"/>
+                <field name="aula" select="0"/>
+                <field name="dia" select="0"/>
+                <field name="hora" select="0"/>
+                <field name="grupo" select="0"/>
+
+            </group>
+            </form>
+        </field>
+    </record>
+    <!-- FIN VISTA FORM: Horarios -->
+
+    <!-- VISTA TREE: Horarios -->
+    <record model="ir.ui.view" id="view_horarios_tree">
+        <field name="name">horarios.tree</field>
+        <field name="model">horarios</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="horarios">
+                <field name="idhorario"/>
+                <field name="programa"/>
+                <field name="nucleo"/>
+                <field name="docente"/>
+                <field name="aula"/>
+                <field name="dia"/>
+                <field name="hora"/>
+                <field name="grupo"/>
+
+            </tree>
+        </field>
+    </record>
+    <!-- FIN VISTA TREE: Horarios -->
+
+    <!-- MODELO: Horarios -->
+    <record model="ir.actions.act_window" id="action_horarios">
+        <field name="name">Horarios</field>
+        <field name="res_model">horarios</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- FIN MODELO: Horarios -->
+
+    <!-- MENÚ SECUNDARIO: Horarios -->
+    <menuitem name="Horarios" id="menu_horarios" action="action_horarios" parent="menu_estadistica"/>
+            
+        <!-- MENÚ PRINCIPAL -->
+        <menuitem name="MENU" id="men_pri"/>
+    </data>
+</odoo>

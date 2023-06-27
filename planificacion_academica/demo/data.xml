@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <!-- Agrega algunos datos de muestra para el modelo de clientes -->
+    <record model="aula" id="aula_demo_1">
+      <field name="idaula">1</field>
+      <field name="nucleo">La Floresta</field>
+      <field name="codigo">603</field>
+      <field name="numeroestudiantes">40</field>
+    </record>
+    <record model="horarios" id="horarios_demo_1">
+      <field name="idhorario">1</field>
+      <field name="programa">PNFT</field>
+      <field name="nucleo">La Guaira</field>
+      <field name="docente">Docente 1</field>
+      <field name="aula">101</field>
+      <field name="dia">Sabado</field>
+      <field name="hora">08:00</field>
+      <field name="grupo">1</field>
+    </record>
+    <record model="estudiante" id="estudiante_demo_1">
+      <field name="idestudiante">1</field>
+      <field name="nombre">Estudiante1</field>
+      <field name="apellido">1</field>
+      <field name="programa">PNFI</field>
+      <field name="nucleo">La Urbina</field>
+      <field name="turno">Nocturno</field>
+      <field name="uc">TIC</field>
+    </record>
+    <record model="estudiante" id="estudiante_demo_2">
+      <field name="idestudiante">2</field>
+      <field name="nombre">Estudiante2</field>
+      <field name="apellido">2</field>
+      <field name="programa">PNFI</field>
+      <field name="nucleo">La Urbina</field>
+      <field name="turno">Nocturno</field>
+      <field name="uc">TIC</field>
+    </record>
+    <record model="estudiante" id="estudiante_demo_3">
+      <field name="idestudiante">3</field>
+      <field name="nombre">Estudiante3</field>
+      <field name="apellido">3</field>
+      <field name="programa">PNFI</field>
+      <field name="nucleo">La Urbina</field>
+      <field name="turno">Nocturno</field>
+      <field name="uc">TIC</field>
+    </record>
+    <record model="docente" id="docente_demo_1">
+      <field name="iddocente">1</field>
+      <field name="nombredocente">Docente</field>
+      <field name="apellidodocente">1</field>
+      <field name="programadocente">PNFI</field>
+      <field name="nucleodocente">La Urbina</field>
+      <field name="turnodocente">Nocturno</field>
+      <field name="ucdocente">TIC</field>
+    </record>
+  </data>
+</odoo>
+
+<!-- Estos son datos instalados por defecto en la base de datos, la carpeta demo junto con
+estos registros pueden eliminarse a futuro
+-->
